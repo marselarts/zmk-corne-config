@@ -10,41 +10,51 @@
 #include <dt-bindings/zmk/mouse.h>
 
 / {
-        keymap {
-                compatible = "zmk,keymap";
-// _____________________________      ________________________________
-// | ` ~   | Q | W | E | R | T |      | Y | U |  I  |  O  |  P  | [ { |
-// _____________________________      _________________________________
-// | &none | A | S | D | F | G |      | H | J |  K  |  L  | ; : | ' " |
-// _____________________________      _________________________________
-// | &none | Z | X | C | V | B |      | N | M | , < | . > | / ? | ] } |
-//          ____________________      ______________________
-//          | ESC | SPC  | TAB |      | ENTER | BSPC | DEL |
-                default_layer {
-                    bindings = <
-&kp TILDE  &kp Q       &kp W        &lt 7 E       &kp R         &kp T               &kp Y        &kp U            &kp I        &kp O         &kp P               &kp LEFT_BRACKET
-&none      &mt LGUI A  &mt LALT S   &mt LCTRL D   &mt LSHIFT F  &kp G               &kp H        &mt LSHIFT J     &mt LCTRL K  &mt LALT L    &mt LGUI SEMICOLON  &kp SINGLE_QUOTE
-&none      &kp Z       &mt RALT X   &kp C         &kp V         &kp B               &kp N        &kp M            &kp COMMA    &mt RALT DOT  &kp SLASH           &kp RIGHT_BRACKET
-                                    &lt 3 ESCAPE  &lt 1 SPACE   &lt 2 TAB           &lt 5 ENTER  &lt 4 BACKSPACE  &lt 6 DELETE
-                        >;
-                };
-                layer1 {
-                // Button Layer
-                    bindings = <
-&none  &none     &none     &none      &none       &none         &kp LC(X)  &kp LC(C)      &kp LC(V)    &kp LC(Z)  &kp LC(LS(Z))  &none
-&none  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHIFT  &none         &kp LEFT   &kp DOWN       &kp UP       &kp RIGHT  &kp CAPS       &none
-&none  &none     &kp RALT  &none      &none       &none         &kp HOME   &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &kp INSERT     &none
-                           &none      &none       &none         &kp ENTER  &kp BACKSPACE  &kp DELETE
-                    >;
-                };
-                layer2 {
-                // Mouse Layer
-                                    bindings = <
-                &none  &none     &none     &none      &none       &none         &none     &none     &none     &none      &none       &none
-                &none  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHIFT  &none         &none     &none     &none     &none      &none       &none
-                &none  &none     &kp RALT  &none      &none       &none         &none     &none     &none     &none      &none       &none
-                                           &none      &none       &none         &kp RCLK  &kp LCLK  &kp MCLK
-                                    >;
-                                };
+    keymap {
+        compatible = "zmk,keymap";
+        // _____________________________      ________________________________
+        // | ` ~   | Q | W | E | R | T |      | Y | U |  I  |  O  |  P  | [ { |
+        // _____________________________      _________________________________
+        // | &none | A | S | D | F | G |      | H | J |  K  |  L  | ; : | ' " |
+        // _____________________________      _________________________________
+        // | &none | Z | X | C | V | B |      | N | M | , < | . > | / ? | ] } |
+        //          ____________________      ______________________
+        //          | ESC | SPC  | TAB |      | ENTER | BSPC | DEL |
+        default_layer {
+            // DEFAULT LAYER
+            bindings = <
+                &kp TILDE  &kp Q       &kp W        &lt 7 E       &kp R         &kp T               &kp Y        &kp U            &kp I        &kp O         &kp P               &kp LEFT_BRACKET
+                &none      &mt LGUI A  &mt LALT S   &mt LCTRL D   &mt LSHIFT F  &kp G               &kp H        &mt LSHIFT J     &mt LCTRL K  &mt LALT L    &mt LGUI SEMICOLON  &kp SINGLE_QUOTE
+                &none      &kp Z       &mt RALT X   &kp C         &kp V         &kp B               &kp N        &kp M            &kp COMMA    &mt RALT DOT  &kp SLASH           &kp RIGHT_BRACKET
+                                                    &lt 3 ESCAPE  &lt 1 SPACE   &lt 2 TAB           &lt 5 ENTER  &lt 4 BACKSPACE  &lt 6 DELETE
+            >;
         };
+        layer1 {
+            // BUTTONS LAYER
+            bindings = <
+                &none  &none     &none     &none      &none       &none           &kp LC(X)  &kp LC(C)      &kp LC(V)    &kp LC(Z)  &kp LC(LS(Z))  &none
+                &none  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHIFT  &none           &kp LEFT   &kp DOWN       &kp UP       &kp RIGHT  &kp CAPS       &none
+                &none  &none     &kp RALT  &none      &none       &none           &kp HOME   &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &kp INSERT     &none
+                                           &none      &none       &none           &kp ENTER  &kp BACKSPACE  &kp DELETE
+            >;
+        };
+        layer2 {
+            // MOUSE LAYER
+            bindings = <
+                &none  &none     &none     &none      &none       &none           &none     &none     &none     &none      &none       &none
+                &none  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHIFT  &none           &none     &none     &none     &none      &none       &none
+                &none  &none     &kp RALT  &none      &none       &none           &none     &none     &none     &none      &none       &none
+                                           &none      &none       &none           &kp RCLK  &kp LCLK  &kp MCLK
+            >;
+        };
+        layer3 {
+            // MEDIA LAYER
+            bindings = <
+                &none  &none     &none     &none      &none       &none           &none           &none                 &none                 &none       &none       &none
+                &none  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHIFT  &none           &kp C_PREVIOUS  &kp C_VOLUME_DOWN     &kp C_VOLUME_UP       &kp C_NEXT  &none       &none
+                &none  &none     &kp RALT  &none      &none       &none           &none           &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &none       &none       &none
+                                           &none      &none       &none           &kp C_STOP      &kp C_PLAY_PAUSE      &kp C_MUTE
+            >;
+        };
+    };
 };
