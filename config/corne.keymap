@@ -7,6 +7,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/mouse.h>
 
 / {
         keymap {
@@ -28,6 +29,7 @@
                         >;
                 };
                 layer1 {
+                // Button Layer
                     bindings = <
 &none  &none     &none     &none      &none       &none         &kp LC(X)  &kp LC(C)      &kp LC(V)    &kp LC(Z)  &kp LC(LS(Z))  &none
 &none  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHIFT  &none         &kp LEFT   &kp DOWN       &kp UP       &kp RIGHT  &kp CAPS       &none
@@ -35,5 +37,14 @@
                            &none      &none       &none         &kp ENTER  &kp BACKSPACE  &kp DELETE
                     >;
                 };
+                layer2 {
+                // Mouse Layer
+                                    bindings = <
+                &none  &none     &none     &none      &none       &none         &none     &none     &none     &none      &none       &none
+                &none  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHIFT  &none         &none     &none     &none     &none      &none       &none
+                &none  &none     &kp RALT  &none      &none       &none         &none     &none     &none     &none      &none       &none
+                                           &none      &none       &none         &kp RCLK  &kp LCLK  &kp MCLK
+                                    >;
+                                };
         };
 };
