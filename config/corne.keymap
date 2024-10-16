@@ -12,6 +12,10 @@
 / {
     keymap {
         compatible = "zmk,keymap";
+        //  &none  &none  &none  &none  &none  &none           &none  &none  &none  &none  &none  &none
+        //  &none  &none  &none  &none  &none  &none           &none  &none  &none  &none  &none  &none
+        //  &none  &none  &none  &none  &none  &none           &none  &none  &none  &none  &none  &none
+        //                       &none  &none  &none           &none  &none  &none
         // _____________________________      ________________________________
         // | ` ~   | Q | W | E | R | T |      | Y | U |  I  |  O  |  P  | [ { |
         // _____________________________      _________________________________
@@ -81,6 +85,15 @@
                &none &kp F11 &kp F4 &kp F5                &kp F6     &kp SCROLLLOCK                  &none  &kp LSHIFT  &kp LALT  &kp LGUI  &none       &none
                &none &kp F10 &kp F1 &kp F2                &kp F3     &kp PAUSE_BREAK                 &none  &none       &none     &kp RALT  &none       &none
                                     &kp K_CONTEXT_MENU    &kp SPACE  &kp TAB                         &none  &none       &none
+            >;
+        };
+        layer2 {
+            // GRAPHICS EDITOR LAYER
+            bindings = <
+                &none  &none  &none  &none  &none       &none                           &none  &none  &none  &none  &none  &none
+                &none  &none  &none  &none  &none       &kp LC(EQUAL)                   &none  &none  &none  &none  &none  &none
+                &none  &none  &none  &none  &none       &kp LC(LS(BACKSLASH))           &none  &none  &none  &none  &none  &none
+                                     &none  &kp LC(N0)  &kp LC(MINUS)                   &none  &none  &none
             >;
         };
     };
