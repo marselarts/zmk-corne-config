@@ -87,7 +87,7 @@
                                     &kp K_CONTEXT_MENU    &kp SPACE  &kp TAB                         &none  &none       &none
             >;
         };
-        layer2 {
+        layer7 {
             // GRAPHICS EDITOR LAYER
             bindings = <
                 &none  &none  &none  &none  &none       &none                           &none  &none  &none  &none  &none  &none
