@@ -10,6 +10,12 @@
 #include <dt-bindings/zmk/mouse.h>
 
 / {
+    &mt {
+        flavor = "tap-preferred";
+    };
+    &lt {
+        flavor = "tap-preferred";
+    };
     keymap {
         compatible = "zmk,keymap";
         //  &none  &none  &none  &none  &none  &none           &none  &none  &none  &none  &none  &none
