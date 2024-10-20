@@ -14,8 +14,7 @@
     quick-tap-ms = <250>;
 };
 
-/* BEGIN: Change mouse movement speed */
-#define U_MOUSE_MOVE_MAX 1200                     /* <--- New max speed setting (default: 600) */
+#define U_MOUSE_MOVE_MAX 1200
 #undef MOVE_UP
 #undef MOVE_DOWN
 #undef MOVE_LEFT
@@ -24,21 +23,6 @@
 #define MOVE_DOWN MOVE_VERT(U_MOUSE_MOVE_MAX)
 #define MOVE_LEFT MOVE_HOR(-U_MOUSE_MOVE_MAX)
 #define MOVE_RIGHT MOVE_HOR(U_MOUSE_MOVE_MAX)
-
-/* END: Change mouse movement speed */
-
-/* BEGIN: Change mouse scroll speed */
-#define U_MOUSE_SCROLL_MAX 1                    /* <--- New max speed setting (default: 10) */
-
-#undef SCROLL_UP
-#undef SCROLL_DOWN
-#undef SCROLL_LEFT
-#undef SCROLL_RIGHT
-#define SCROLL_UP SCROLL_VERT(U_MOUSE_SCROLL_MAX)
-#define SCROLL_DOWN SCROLL_VERT(-U_MOUSE_SCROLL_MAX)
-#define SCROLL_LEFT SCROLL_HOR(-U_MOUSE_SCROLL_MAX)
-#define SCROLL_RIGHT SCROLL_HOR(U_MOUSE_SCROLL_MAX)
-/* END: Change mouse scroll speed */
 
 / {
     behaviors {
