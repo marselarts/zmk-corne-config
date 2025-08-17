@@ -60,9 +60,9 @@
         layer1 {
             // BUTTONS LAYER
             bindings = <
-                &none  &none     &none     &none      &none       &none           &kp LC(X)  &kp LC(C)      &kp LC(V)    &kp LC(Z)  &kp LC(LS(Z))  &none
-                &none  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHIFT  &none           &kp LEFT   &kp DOWN       &kp UP       &kp RIGHT  &kp CAPS       &none
-                &none  &none     &kp RALT  &none      &none       &none           &kp HOME   &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &kp INSERT     &none
+                &none  &none     &none      &none      &none       &none           &kp LC(X)  &kp LC(C)      &kp LC(V)    &kp LC(Z)  &kp LC(LS(Z))  &none
+                &none  &kp LGUI  &kp LALT   &kp LCTRL  &kp LSHIFT  &none           &kp LEFT   &kp DOWN       &kp UP       &kp RIGHT  &kp CAPS       &none
+                &none  &none     &kp LC(X)  &kp LC(C)  &kp LC(V)   &none           &kp HOME   &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &kp INSERT     &none
                                            &none      &none       &none           &kp ENTER  &kp BACKSPACE  &kp DELETE
             >;
         };
